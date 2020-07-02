@@ -122,12 +122,12 @@ class LoginViewController: UIViewController {
         
         choiceSegmentedController.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         choiceSegmentedController.bottomAnchor.constraint(equalTo: inputContainerView.topAnchor, constant: -20).isActive = true
-        choiceSegmentedController.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -24).isActive = true
+        choiceSegmentedController.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, constant: -24).isActive = true
         choiceSegmentedController.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
         inputContainerView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         inputContainerView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        inputContainerView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -24).isActive = true
+        inputContainerView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, constant: -24).isActive = true
         inputContainerView.heightAnchor.constraint(equalToConstant: 200).isActive = true
         
         nameTextField.leadingAnchor.constraint(equalTo: inputContainerView.leadingAnchor, constant: 12).isActive = true
@@ -154,7 +154,7 @@ class LoginViewController: UIViewController {
         
         registerButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         registerButton.topAnchor.constraint(equalTo: inputContainerView.bottomAnchor, constant: 12).isActive = true
-        registerButton.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -24).isActive = true
+        registerButton.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, constant: -24).isActive = true
         registerButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
     }

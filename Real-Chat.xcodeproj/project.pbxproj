@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4801A064856B98200F4C7BD7 /* Pods_Real_Chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BA21BEAE67FB2835F6A53F4 /* Pods_Real_Chat.framework */; };
 		B62B60AE24AE5A8A0037F3B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62B60AD24AE5A8A0037F3B2 /* AppDelegate.swift */; };
 		B62B60B024AE5A8A0037F3B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62B60AF24AE5A8A0037F3B2 /* SceneDelegate.swift */; };
 		B62B60B224AE5A8A0037F3B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62B60B124AE5A8A0037F3B2 /* ViewController.swift */; };
@@ -16,9 +17,12 @@
 		B62B60C324AE5B370037F3B2 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62B60C224AE5B370037F3B2 /* UIColor.swift */; };
 		B62B60C924AE5D690037F3B2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62B60C824AE5D690037F3B2 /* LoginViewController.swift */; };
 		B62B60CC24AE5DC40037F3B2 /* AppLocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62B60CB24AE5DC40037F3B2 /* AppLocalizedStrings.swift */; };
+		B62B60CF24AE86670037F3B2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B62B60CE24AE86660037F3B2 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		071D8AF9FF540D7B7E0235D6 /* Pods-Real-Chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Real-Chat.release.xcconfig"; path = "Target Support Files/Pods-Real-Chat/Pods-Real-Chat.release.xcconfig"; sourceTree = "<group>"; };
+		9BA21BEAE67FB2835F6A53F4 /* Pods_Real_Chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Real_Chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62B60AA24AE5A8A0037F3B2 /* Real-Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Real-Chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62B60AD24AE5A8A0037F3B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B62B60AF24AE5A8A0037F3B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +34,8 @@
 		B62B60C224AE5B370037F3B2 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		B62B60C824AE5D690037F3B2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B62B60CB24AE5DC40037F3B2 /* AppLocalizedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocalizedStrings.swift; sourceTree = "<group>"; };
+		B62B60CE24AE86660037F3B2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EC9458E01AD88B16C5B3A066 /* Pods-Real-Chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Real-Chat.debug.xcconfig"; path = "Target Support Files/Pods-Real-Chat/Pods-Real-Chat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +43,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4801A064856B98200F4C7BD7 /* Pods_Real_Chat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		073922947C3BFF4792366D83 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC9458E01AD88B16C5B3A066 /* Pods-Real-Chat.debug.xcconfig */,
+				071D8AF9FF540D7B7E0235D6 /* Pods-Real-Chat.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B62B60A124AE5A8A0037F3B2 = {
 			isa = PBXGroup;
 			children = (
 				B62B60AC24AE5A8A0037F3B2 /* Real-Chat */,
 				B62B60AB24AE5A8A0037F3B2 /* Products */,
+				073922947C3BFF4792366D83 /* Pods */,
+				CC43F34404A5DC18AF827082 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +81,7 @@
 		B62B60AC24AE5A8A0037F3B2 /* Real-Chat */ = {
 			isa = PBXGroup;
 			children = (
+				B62B60CD24AE863D0037F3B2 /* Configuration */,
 				B62B60C524AE5C1A0037F3B2 /* Delegates */,
 				B62B60C624AE5C260037F3B2 /* Model */,
 				B62B60C724AE5C2C0037F3B2 /* Views */,
@@ -124,6 +144,22 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		B62B60CD24AE863D0037F3B2 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				B62B60CE24AE86660037F3B2 /* GoogleService-Info.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		CC43F34404A5DC18AF827082 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9BA21BEAE67FB2835F6A53F4 /* Pods_Real_Chat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,9 +167,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B62B60BE24AE5A8D0037F3B2 /* Build configuration list for PBXNativeTarget "Real-Chat" */;
 			buildPhases = (
+				1D55327E5B511A600220A0FA /* [CP] Check Pods Manifest.lock */,
 				B62B60A624AE5A8A0037F3B2 /* Sources */,
 				B62B60A724AE5A8A0037F3B2 /* Frameworks */,
 				B62B60A824AE5A8A0037F3B2 /* Resources */,
+				B2378A451D7845785D4D132F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,12 +221,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				B62B60BA24AE5A8D0037F3B2 /* LaunchScreen.storyboard in Resources */,
+				B62B60CF24AE86670037F3B2 /* GoogleService-Info.plist in Resources */,
 				B62B60B724AE5A8D0037F3B2 /* Assets.xcassets in Resources */,
 				B62B60B524AE5A8A0037F3B2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D55327E5B511A600220A0FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Real-Chat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2378A451D7845785D4D132F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Real-Chat/Pods-Real-Chat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Real-Chat/Pods-Real-Chat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Real-Chat/Pods-Real-Chat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B62B60A624AE5A8A0037F3B2 /* Sources */ = {
@@ -342,6 +423,7 @@
 		};
 		B62B60BF24AE5A8D0037F3B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC9458E01AD88B16C5B3A066 /* Pods-Real-Chat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -360,6 +442,7 @@
 		};
 		B62B60C024AE5A8D0037F3B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 071D8AF9FF540D7B7E0235D6 /* Pods-Real-Chat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
