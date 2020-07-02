@@ -13,6 +13,9 @@ extension UIColor {
     
     static let logInBGC = UIColor(red: 0.88, green: 0.35, blue: 0.16, alpha: 1)
     static let backgroundWhite = UIColor(red: 0.96, green: 0.97, blue: 0.98, alpha: 1)
+    static let loginBlue = UIColor(red: 0.45, green: 0.73, blue: 1.00, alpha: 1.00)
+
+
     
     class func hexaToUIColor(hex: String, alpha: CGFloat = 1.0) -> UIColor? {
         var cString = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
