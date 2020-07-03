@@ -19,5 +19,6 @@ struct AppLocalizedStrings {
     static let registerSuccess = "User has been successfully registed 😀"
     static let registerSaved = "Your information has been successfully Saved to DB 🤝"
     static let users = "Users"
+    static let login = "Login"
 
 }

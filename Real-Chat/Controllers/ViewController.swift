@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ViewController: UIViewController {
 
@@ -14,9 +15,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.backgroundWhite
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: AppLocalizedStrings.logout, style: .plain, target: self, action: #selector(didTapOnLogoutBtn))
+        if Auth.auth().currentUser?.uid == nil {
+            perform(#selector(didTapOnLogoutBtn), with: nil, afterDelay: 0)
+        }
     }
     
     @objc func didTapOnLogoutBtn() {
+        do {
+            try Auth.auth().signOut()
+        } catch let logoutError {
+            print(logoutError.localizedDescription)
+        }
         let loginVc = LoginViewController()
         loginVc.modalPresentationStyle = .fullScreen
         present(loginVc, animated: true, completion: nil)
