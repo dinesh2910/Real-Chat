@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,7 @@
 		B62B60C924AE5D690037F3B2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62B60C824AE5D690037F3B2 /* LoginViewController.swift */; };
 		B62B60CC24AE5DC40037F3B2 /* AppLocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62B60CB24AE5DC40037F3B2 /* AppLocalizedStrings.swift */; };
 		B62B60CF24AE86670037F3B2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B62B60CE24AE86660037F3B2 /* GoogleService-Info.plist */; };
+		B62B60D324AEEBC80037F3B2 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62B60D224AEEBC80037F3B2 /* URLConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		B62B60C824AE5D690037F3B2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B62B60CB24AE5DC40037F3B2 /* AppLocalizedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocalizedStrings.swift; sourceTree = "<group>"; };
 		B62B60CE24AE86660037F3B2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B62B60D224AEEBC80037F3B2 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
 		EC9458E01AD88B16C5B3A066 /* Pods-Real-Chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Real-Chat.debug.xcconfig"; path = "Target Support Files/Pods-Real-Chat/Pods-Real-Chat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,7 +58,6 @@
 				EC9458E01AD88B16C5B3A066 /* Pods-Real-Chat.debug.xcconfig */,
 				071D8AF9FF540D7B7E0235D6 /* Pods-Real-Chat.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -140,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				B62B60CB24AE5DC40037F3B2 /* AppLocalizedStrings.swift */,
+				B62B60D224AEEBC80037F3B2 /* URLConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -279,6 +281,7 @@
 				B62B60B224AE5A8A0037F3B2 /* ViewController.swift in Sources */,
 				B62B60C324AE5B370037F3B2 /* UIColor.swift in Sources */,
 				B62B60CC24AE5DC40037F3B2 /* AppLocalizedStrings.swift in Sources */,
+				B62B60D324AEEBC80037F3B2 /* URLConstants.swift in Sources */,
 				B62B60AE24AE5A8A0037F3B2 /* AppDelegate.swift in Sources */,
 				B62B60C924AE5D690037F3B2 /* LoginViewController.swift in Sources */,
 				B62B60B024AE5A8A0037F3B2 /* SceneDelegate.swift in Sources */,

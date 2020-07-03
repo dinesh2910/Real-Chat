@@ -16,5 +16,8 @@ struct AppLocalizedStrings {
     static let name = "Name"
     static let email = "EmailID"
     static let password = "Password"
+    static let registerSuccess = "User has been successfully registed 😀"
+    static let registerSaved = "Your information has been successfully Saved to DB 🤝"
+    static let users = "Users"
 
 }
