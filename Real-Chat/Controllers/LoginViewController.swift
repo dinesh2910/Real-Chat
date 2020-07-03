@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class LoginViewController: UIViewController {
     
@@ -22,7 +24,7 @@ class LoginViewController: UIViewController {
         return containerView
     }()
     
-    let registerButton: UIButton = {
+    lazy var registerButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle(AppLocalizedStrings.register, for: .normal)
@@ -30,6 +32,7 @@ class LoginViewController: UIViewController {
         button.backgroundColor = UIColor.loginBlue
         button.layer.cornerRadius = 5.0
         button.clipsToBounds = true
+        button.addTarget(self, action: #selector(didPressRegisterButton), for: .touchUpInside)
         return button
     }()
     
@@ -66,6 +69,7 @@ class LoginViewController: UIViewController {
         let tf = UITextField()
         tf.placeholder = AppLocalizedStrings.password
         tf.backgroundColor = UIColor.clear
+        tf.isSecureTextEntry = true
         tf.translatesAutoresizingMaskIntoConstraints = false
         return tf
     }()
@@ -107,6 +111,31 @@ class LoginViewController: UIViewController {
         return .lightContent
     }
     
+    @objc func didPressRegisterButton() {
+        if let email = emailTextField.text, let password = passwordTextField.text, let name = nameTextField.text {
+            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                if let e = error {
+                    print(e.localizedDescription)
+                } else {
+                    print(AppLocalizedStrings.registerSuccess)
+                    guard let userID = Auth.auth().currentUser?.uid else { return }
+                    var ref = Database.database().reference(fromURL: URLConstants.refdbUrl)
+                    let usersRef = ref.child(AppLocalizedStrings.users).child(userID)
+                    let values = [AppLocalizedStrings.name: name, AppLocalizedStrings.email: email]
+                    usersRef.updateChildValues(values) { (error, ref) in
+                        if let storeError = error {
+                            print(storeError.localizedDescription)
+                        } else {
+                            print(AppLocalizedStrings.registerSaved)
+                        }
+                    }
+                    
+                }
+            }
+            
+        }
+    }
+    
     func setupConstaints() {
         
         inputContainerView.addSubview(nameTextField)
@@ -122,12 +151,12 @@ class LoginViewController: UIViewController {
         
         choiceSegmentedController.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         choiceSegmentedController.bottomAnchor.constraint(equalTo: inputContainerView.topAnchor, constant: -20).isActive = true
-        choiceSegmentedController.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -24).isActive = true
+        choiceSegmentedController.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, constant: -24).isActive = true
         choiceSegmentedController.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
         inputContainerView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         inputContainerView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        inputContainerView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -24).isActive = true
+        inputContainerView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, constant: -24).isActive = true
         inputContainerView.heightAnchor.constraint(equalToConstant: 200).isActive = true
         
         nameTextField.leadingAnchor.constraint(equalTo: inputContainerView.leadingAnchor, constant: 12).isActive = true
@@ -154,7 +183,7 @@ class LoginViewController: UIViewController {
         
         registerButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         registerButton.topAnchor.constraint(equalTo: inputContainerView.bottomAnchor, constant: 12).isActive = true
-        registerButton.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -24).isActive = true
+        registerButton.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, constant: -24).isActive = true
         registerButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
     }
